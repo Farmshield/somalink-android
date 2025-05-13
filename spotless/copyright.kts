@@ -14,10 +14,3 @@
  * either express or implied, including but not limited to the implied warranties
  * of merchantability and fitness for a particular purpose.
  */
-plugins {
-    id("somalink.application.plugin")
-}
-
-android {
-    namespace = "com.root3.somalink"
-}

@@ -15,9 +15,10 @@
  * of merchantability and fitness for a particular purpose.
  */
 plugins {
-    id("somalink.application.plugin")
+    id("somalink.module.plugin")
 }
 
+
 android {
-    namespace = "com.root3.somalink"
+    namespace = "com.somalink.domain"
 }

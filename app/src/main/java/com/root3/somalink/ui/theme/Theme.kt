@@ -1,6 +1,21 @@
+/**
+ * Copyright (c) 2025 Somalink Mobile Application
+ *
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of Somalink.
+ * You shall not disclose such confidential information and shall use it only in accordance
+ * with the terms of the license agreement you entered into with Somalink.
+ *
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * NO WARRANTY: This software is provided "as is" without warranty of any kind,
+ * either express or implied, including but not limited to the implied warranties
+ * of merchantability and fitness for a particular purpose.
+ */
 package com.root3.somalink.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -33,10 +48,19 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+/**
+ * Applies the SomaLink custom theme to the app's UI content.
+ *
+ * This theme supports dynamic colors on Android 12+ and switches between light and dark themes
+ * based on the [darkTheme] parameter or system setting.
+ *
+ * @param darkTheme Whether to use the dark color scheme. Defaults to the system setting.
+ * @param dynamicColor Whether to use dynamic colors (Android 12+). Defaults to true.
+ * @param content The composable content to be styled by this theme.
+ */
 @Composable
 fun SomaLinkTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
@@ -56,3 +80,4 @@ fun SomaLinkTheme(
         content = content
     )
 }
+

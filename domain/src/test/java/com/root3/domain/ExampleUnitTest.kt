@@ -14,7 +14,7 @@
  * either express or implied, including but not limited to the implied warranties
  * of merchantability and fitness for a particular purpose.
  */
-package com.root3.somalink
+package com.root3.domain
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

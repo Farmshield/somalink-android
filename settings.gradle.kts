@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "somaLink"
 include(":app")
- 
+include(":domain")
