@@ -1,6 +1,7 @@
 package extensions
 
 import dependencies.Dependencies
+import modules.Modules
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.project
@@ -108,11 +109,6 @@ fun DependencyHandler.addPagingDependencies() {
     implementation(Dependencies.pagingRuntime)
 }
 
-fun DependencyHandler.addFirebaseDependencies() {
-    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
-    implementation("com.google.firebase:firebase-messaging")
-    implementation("com.google.firebase:firebase-analytics")
-}
 
 
 /**
@@ -136,13 +132,12 @@ fun DependencyHandler.addRetrofitDependencies() {
     implementation(Dependencies.timber)
 }
 
-//fun DependencyHandler.implementCoreModules() {
-//    implementation(project(Modules.core))
-//    implementation(project(Modules.commonUi))
-//    implementation(project(Modules.database))
-//    implementation(project(Modules.domain))
-//    implementation(project(Modules.navigation))
-//    implementation(project(Modules.network))
-//    implementation(project(Modules.sharedPrefs))
-//    implementation(project(Modules.shared))
-//}
+fun DependencyHandler.implementCoreModules() {
+    implementation(project(Modules.core))
+    implementation(project(Modules.commonUi))
+    implementation(project(Modules.database))
+    implementation(project(Modules.domain))
+    implementation(project(Modules.navigation))
+    implementation(project(Modules.network))
+    implementation(project(Modules.sharedPrefs))
+}

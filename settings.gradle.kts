@@ -21,4 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "somaLink"
 include(":app")
+include(":sharedUi")
+include(":network")
+include(":database")
 include(":domain")
+include(":navigation")
+include(":core")
+include(":localPrefs")

@@ -5,11 +5,11 @@ import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import config.AppConfig
 import extensions.addComposeDependencies
 import extensions.addCoreAndroidDependencies
-import extensions.addFirebaseDependencies
 import extensions.addHiltDependencies
 import extensions.addRetrofitDependencies
 import extensions.addTestDependencies
 import extensions.addWorkManagerDependencies
+import extensions.implementCoreModules
 import org.gradle.api.GradleException
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -37,7 +37,6 @@ class ApplicationModulePlugin : Plugin<Project> {
         plugins.apply(Plugins.ksp)
         plugins.apply(Plugins.hiltAndroid)
         plugins.apply(Plugins.compose)
-        plugins.apply(Plugins.googleServices)
     }
 
     private fun Project.configureAndroid() {
@@ -165,9 +164,8 @@ class ApplicationModulePlugin : Plugin<Project> {
             addTestDependencies()
             addHiltDependencies()
             addRetrofitDependencies()
-            addFirebaseDependencies()
             addWorkManagerDependencies()
-//            addAllModules()
+            implementCoreModules()
         }
     }
 

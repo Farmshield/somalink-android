@@ -7,7 +7,6 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") apply false
     id("com.android.library") apply false
     id("com.google.devtools.ksp") apply false
-    id("com.google.gms.google-services") apply false
     alias(libs.plugins.ktlint)
     alias(libs.plugins.spotless)
     alias(libs.plugins.detekt)

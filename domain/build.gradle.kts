@@ -18,7 +18,6 @@ plugins {
     id("somalink.module.plugin")
 }
 
-
 android {
-    namespace = "com.somalink.domain"
+    namespace = "com.newton.domain"
 }
